@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NAR_KGSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NAR_KGS.dbo.view_temmuz_nizamiye' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="view_temmuz_nizamiye">
+          <Key>
+            <PropertyRef Name="ID_TIP" />
+            <PropertyRef Name="PLAKA" />
+          </Key>
+          <Property Name="SICIL" Type="varchar" MaxLength="30" />
+          <Property Name="FACILITYKOD" Type="int" />
+          <Property Name="ID_TIP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="UNVAN_KODU" Type="int" />
+          <Property Name="ADI" Type="varchar" MaxLength="50" />
+          <Property Name="SOYADI" Type="varchar" MaxLength="50" />
+          <Property Name="RESIM" Type="image" />
+          <Property Name="TC_KIMLIK_NO" Type="varchar" MaxLength="11" />
+          <Property Name="BOLUM_ADI" Type="varchar" MaxLength="100" />
+          <Property Name="DURUM_KODU" Type="smallint" />
+          <Property Name="MIFARE" Type="varchar" MaxLength="24" />
+          <Property Name="BANKA_KART" Type="varchar" MaxLength="24" />
+          <Property Name="PLAKA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="MARKA" Type="varchar" MaxLength="20" />
+          <Property Name="MODEL" Type="varchar" MaxLength="20" />
+          <Property Name="RENK" Type="varchar" MaxLength="20" />
+          <Property Name="RUHSAT_SAHIBI" Type="varchar" MaxLength="50" />
+          <Property Name="OGS_ID" Type="varchar" MaxLength="24" />
+          <Property Name="KART_SKT" Type="datetime" />
+          <Property Name="MODEL_YILI" Type="varchar" MaxLength="4" />
+          <Property Name="ONAY" Type="varchar" MaxLength="1" />
+          <Property Name="KAYIP_CALINTI" Type="varchar" MaxLength="1" />
+          <Property Name="GIRIS_ENGELLI" Type="varchar" MaxLength="1" />
+          <Property Name="ISTEK_TARIHI" Type="datetime" />
+          <Property Name="TURU" Type="tinyint" />
+          <Property Name="YAKINLIGI" Type="varchar" MaxLength="15" />
+          <Property Name="ACIKLAMA" Type="varchar" MaxLength="255" />
+          <Property Name="GUVENLIK_NOTU" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="NAR_KGSModelStoreContainer">
+          <EntitySet Name="view_temmuz_nizamiye" EntityType="Self.view_temmuz_nizamiye" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [view_temmuz_nizamiye].[SICIL] AS [SICIL], 
+    [view_temmuz_nizamiye].[FACILITYKOD] AS [FACILITYKOD], 
+    [view_temmuz_nizamiye].[ID_TIP] AS [ID_TIP], 
+    [view_temmuz_nizamiye].[UNVAN_KODU] AS [UNVAN_KODU], 
+    [view_temmuz_nizamiye].[ADI] AS [ADI], 
+    [view_temmuz_nizamiye].[SOYADI] AS [SOYADI], 
+    [view_temmuz_nizamiye].[RESIM] AS [RESIM], 
+    [view_temmuz_nizamiye].[TC_KIMLIK_NO] AS [TC_KIMLIK_NO], 
+    [view_temmuz_nizamiye].[BOLUM_ADI] AS [BOLUM_ADI], 
+    [view_temmuz_nizamiye].[DURUM_KODU] AS [DURUM_KODU], 
+    [view_temmuz_nizamiye].[MIFARE] AS [MIFARE], 
+    [view_temmuz_nizamiye].[BANKA_KART] AS [BANKA_KART], 
+    [view_temmuz_nizamiye].[PLAKA] AS [PLAKA], 
+    [view_temmuz_nizamiye].[MARKA] AS [MARKA], 
+    [view_temmuz_nizamiye].[MODEL] AS [MODEL], 
+    [view_temmuz_nizamiye].[RENK] AS [RENK], 
+    [view_temmuz_nizamiye].[RUHSAT_SAHIBI] AS [RUHSAT_SAHIBI], 
+    [view_temmuz_nizamiye].[OGS_ID] AS [OGS_ID], 
+    [view_temmuz_nizamiye].[KART_SKT] AS [KART_SKT], 
+    [view_temmuz_nizamiye].[MODEL_YILI] AS [MODEL_YILI], 
+    [view_temmuz_nizamiye].[ONAY] AS [ONAY], 
+    [view_temmuz_nizamiye].[KAYIP_CALINTI] AS [KAYIP_CALINTI], 
+    [view_temmuz_nizamiye].[GIRIS_ENGELLI] AS [GIRIS_ENGELLI], 
+    [view_temmuz_nizamiye].[ISTEK_TARIHI] AS [ISTEK_TARIHI], 
+    [view_temmuz_nizamiye].[TURU] AS [TURU], 
+    [view_temmuz_nizamiye].[YAKINLIGI] AS [YAKINLIGI], 
+    [view_temmuz_nizamiye].[ACIKLAMA] AS [ACIKLAMA], 
+    [view_temmuz_nizamiye].[GUVENLIK_NOTU] AS [GUVENLIK_NOTU]
+    FROM [dbo].[view_temmuz_nizamiye] AS [view_temmuz_nizamiye]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NAR_KGSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="NAR_KGSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="view_temmuz_nizamiye" EntityType="NAR_KGSModel.view_temmuz_nizamiye" />
+        </EntityContainer>
+        <EntityType Name="view_temmuz_nizamiye">
+          <Key>
+            <PropertyRef Name="ID_TIP" />
+            <PropertyRef Name="PLAKA" />
+          </Key>
+          <Property Name="SICIL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FACILITYKOD" Type="Int32" />
+          <Property Name="ID_TIP" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="UNVAN_KODU" Type="Int32" />
+          <Property Name="ADI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SOYADI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RESIM" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="TC_KIMLIK_NO" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="BOLUM_ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DURUM_KODU" Type="Int16" />
+          <Property Name="MIFARE" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+          <Property Name="BANKA_KART" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+          <Property Name="PLAKA" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="MARKA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MODEL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RENK" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RUHSAT_SAHIBI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OGS_ID" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+          <Property Name="KART_SKT" Type="DateTime" Precision="3" />
+          <Property Name="MODEL_YILI" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ONAY" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="KAYIP_CALINTI" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="GIRIS_ENGELLI" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ISTEK_TARIHI" Type="DateTime" Precision="3" />
+          <Property Name="TURU" Type="Byte" />
+          <Property Name="YAKINLIGI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="GUVENLIK_NOTU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NAR_KGSModelStoreContainer" CdmEntityContainer="NAR_KGSEntities">
+          <EntitySetMapping Name="view_temmuz_nizamiye">
+            <EntityTypeMapping TypeName="NAR_KGSModel.view_temmuz_nizamiye">
+              <MappingFragment StoreEntitySet="view_temmuz_nizamiye">
+                <ScalarProperty Name="GUVENLIK_NOTU" ColumnName="GUVENLIK_NOTU" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="YAKINLIGI" ColumnName="YAKINLIGI" />
+                <ScalarProperty Name="TURU" ColumnName="TURU" />
+                <ScalarProperty Name="ISTEK_TARIHI" ColumnName="ISTEK_TARIHI" />
+                <ScalarProperty Name="GIRIS_ENGELLI" ColumnName="GIRIS_ENGELLI" />
+                <ScalarProperty Name="KAYIP_CALINTI" ColumnName="KAYIP_CALINTI" />
+                <ScalarProperty Name="ONAY" ColumnName="ONAY" />
+                <ScalarProperty Name="MODEL_YILI" ColumnName="MODEL_YILI" />
+                <ScalarProperty Name="KART_SKT" ColumnName="KART_SKT" />
+                <ScalarProperty Name="OGS_ID" ColumnName="OGS_ID" />
+                <ScalarProperty Name="RUHSAT_SAHIBI" ColumnName="RUHSAT_SAHIBI" />
+                <ScalarProperty Name="RENK" ColumnName="RENK" />
+                <ScalarProperty Name="MODEL" ColumnName="MODEL" />
+                <ScalarProperty Name="MARKA" ColumnName="MARKA" />
+                <ScalarProperty Name="PLAKA" ColumnName="PLAKA" />
+                <ScalarProperty Name="BANKA_KART" ColumnName="BANKA_KART" />
+                <ScalarProperty Name="MIFARE" ColumnName="MIFARE" />
+                <ScalarProperty Name="DURUM_KODU" ColumnName="DURUM_KODU" />
+                <ScalarProperty Name="BOLUM_ADI" ColumnName="BOLUM_ADI" />
+                <ScalarProperty Name="TC_KIMLIK_NO" ColumnName="TC_KIMLIK_NO" />
+                <ScalarProperty Name="RESIM" ColumnName="RESIM" />
+                <ScalarProperty Name="SOYADI" ColumnName="SOYADI" />
+                <ScalarProperty Name="ADI" ColumnName="ADI" />
+                <ScalarProperty Name="UNVAN_KODU" ColumnName="UNVAN_KODU" />
+                <ScalarProperty Name="ID_TIP" ColumnName="ID_TIP" />
+                <ScalarProperty Name="FACILITYKOD" ColumnName="FACILITYKOD" />
+                <ScalarProperty Name="SICIL" ColumnName="SICIL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

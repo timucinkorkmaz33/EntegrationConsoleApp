@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c3e41da9ca9b4b628e05f53102555cfd" Name="Diagram1" ZoomLevel="52">
+        <EntityTypeShape EntityType="KAYSERI_MEYERModel.cbo_Bolum" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KAYSERI_MEYERModel.cbo_Firma" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KAYSERI_MEYERModel.cbo_Gorev" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KAYSERI_MEYERModel.cbo_Pozisyon" Width="1.5" PointX="0.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KAYSERI_MEYERModel.Duty" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KAYSERI_MEYERModel.Tasnifleme" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KAYSERI_MEYERModel.Tbl_Birimler" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KAYSERI_MEYERModel.UserList" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KAYSERI_MEYERModel.Tbl_SicilArac" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="KAYSERI_MEYERModel.Sicil" Width="1.5" PointX="3" PointY="3.375" />
+        <AssociationConnector Association="KAYSERI_MEYERModel.FK_Sicil_cbo_Bolum" />
+        <AssociationConnector Association="KAYSERI_MEYERModel.FK_Sicil_cbo_Firma" />
+        <AssociationConnector Association="KAYSERI_MEYERModel.FK_Sicil_cbo_Gorev" />
+        <AssociationConnector Association="KAYSERI_MEYERModel.FK_Sicil_cbo_Pozisyon" />
+        <AssociationConnector Association="KAYSERI_MEYERModel.FK_Tasnifleme_Sicil" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
